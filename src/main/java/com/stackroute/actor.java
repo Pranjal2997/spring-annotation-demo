@@ -1,9 +1,24 @@
 package com.stackroute;
 
-public class actor {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+    @Component
+    public class actor {
     private String name;
     private String gender;
     private int age;
+
+    @Autowired
+    public actor(String name, String gender, int age) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+    }
+
+    public actor(){
+
+    }
 
     public String getName() {
         return name;
@@ -30,10 +45,9 @@ public class actor {
         this.age = age;
     }
 
-    public int displayDetails(){
+    public void displayDetails(){
         System.out.println("Name: "+this.name);
         System.out.println("Gender: "+this.gender);
         System.out.println("Age: "+this.age);
-        return 1;
     }
 }
