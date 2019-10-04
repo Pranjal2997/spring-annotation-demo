@@ -1,37 +1,19 @@
 package com.stackroute.domain;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-    @Component
-    public class actor {
+
+@Component
+public class Actor {
     private String name;
     private String gender;
     private int age;
 
-    @Autowired
-    public actor(String name, String gender, int age) {
+    public Actor(String name, String gender, int age) {
         this.name = name;
         this.gender = gender;
         this.age = age;
     }
-
-    public actor(){
-
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
 
     public void setName(String name) {
         this.name = name;
@@ -45,9 +27,11 @@ import org.springframework.stereotype.Component;
         this.age = age;
     }
 
-    public void displayDetails(){
+    public void display(){
         System.out.println("Name: "+this.name);
         System.out.println("Gender: "+this.gender);
         System.out.println("Age: "+this.age);
     }
+
+
 }
